@@ -21,20 +21,4 @@ steps:
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/sharanyakg97/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.json'
     csmParametersFileLink: 'https://raw.githubusercontent.com/sharanyakg97/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.parameters.json'
-    overrideParameters: |
-      {
-        "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-        "contentVersion": "1.0.0.0",
-        "parameters": {
-          "adminUsername": {
-            "value":"GEN-UNIQUE"
-          },
-          "adminPassword": {
-            "value":"GEN-PASSWORD"
-          },
-          "dnsLabelPrefix": {
-            "value":"GEN-UNIQUE"
-          }
-        }
-      }
     deploymentMode: 'Incremental'
