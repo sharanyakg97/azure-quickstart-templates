@@ -20,4 +20,5 @@ steps:
     location: 'East US'
     templateLocation: 'Linked artifact'
     csmFile: 'https://raw.githubusercontent.com/sharanyakg97/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.json'
+    overrideParameters: 'https://raw.githubusercontent.com/sharanyakg97/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
