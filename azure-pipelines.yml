@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'arm-template'
+    subscriptionId: 'e7a3f85c-ec63-4b25-be59-a449da46e127'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'template-deployment-rg'
+    location: 'East US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'https://raw.githubusercontent.com/sharanyakg97/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.json'
+    deploymentMode: 'Incremental'
