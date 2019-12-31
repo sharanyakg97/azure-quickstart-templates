@@ -18,9 +18,9 @@ steps:
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'template-deployment-rg'
     location: 'East US'
-    templateLocation: 'Linked artifact'
-    csmFile: 'https://raw.githubusercontent.com/sharanyakg97/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.json'
-    csmParametersFile: 'https://raw.githubusercontent.com/sharanyakg97/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.parameters.json'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/sharanyakg97/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/sharanyakg97/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.parameters.json'
     overrideParameters: |
       {
         "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
